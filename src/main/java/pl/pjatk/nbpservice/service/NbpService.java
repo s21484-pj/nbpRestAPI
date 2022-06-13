@@ -39,15 +39,6 @@ public class NbpService {
     }
 
     public double calculate(List<Rate> rateList) {
-//        double sum = 0;
-//        long count = 0;
-//        for (Rate rate : rateList) {
-//            double averageValue = rate.getAverageValue();
-//            sum += averageValue;
-//            count++;
-//        }
-//        return count > 0 ? sum / count : 0.0d;
-
         return rateList.stream()
                 .mapToDouble(Rate::getMid)
                 .average()
